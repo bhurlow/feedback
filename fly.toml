@@ -5,7 +5,7 @@ kill_signal = "SIGINT"
 kill_timeout = 5
 
 [processes]
-  app = "run --allow-net ./example.ts"
+  app = "run --allow-env --allow-net ./main.ts"
 
 [env]
 
