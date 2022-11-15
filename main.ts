@@ -8,7 +8,7 @@ console.log("connecting to url", url);
 
 const client = new Client(url);
 
-const greeting = "<h1>Hello From Deno on Fly!</h1>";
+const greeting = "<h1>Hello From Deno on Fly IO!</h1>";
 
 app(
   get("/", () => greeting),
