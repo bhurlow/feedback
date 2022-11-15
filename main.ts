@@ -2,7 +2,11 @@ import { app, get } from "https://denopkg.com/syumai/dinatra/mod.ts";
 
 import { Client } from "https://deno.land/x/postgres@v0.17.0/mod.ts";
 
-const client = new Client(Deno.env.get("DATABASE_URL"));
+const url = Deno.env.get("DATABASE_URL");
+
+console.log("connecting to url", url);
+
+const client = new Client(url);
 
 const greeting = "<h1>Hello From Deno on Fly!</h1>";
 
@@ -19,7 +23,7 @@ app(
 
     console.log(array_result);
 
-    return 'ret';
+    return "ret";
 
     // console.log(array_result.rows);
     // return '<h1> sup </h1>'
